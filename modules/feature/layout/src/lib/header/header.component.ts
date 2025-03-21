@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-header',
+  selector: 'e-commerce-layout-header',
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
