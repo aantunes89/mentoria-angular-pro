@@ -22,6 +22,6 @@ describe('HeaderComponent', () => {
   it('should cointain a title', () => {
     const header: HTMLHeadElement = fixture.nativeElement.querySelector('header');
 
-    expect(header.textContent).toEqual('Ecommerce');
+    expect(header.textContent).toBe('Ecommerce');
   });
 });
