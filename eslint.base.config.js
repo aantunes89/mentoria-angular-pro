@@ -23,6 +23,7 @@ module.exports = [
           ],
         },
       ],
+      'no-console': ['error'],
     },
   },
   {
