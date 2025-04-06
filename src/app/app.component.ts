@@ -9,6 +9,4 @@ import { LayoutModule } from '@ecommerce/layout';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'ecommerce';
-}
+export class AppComponent {}
