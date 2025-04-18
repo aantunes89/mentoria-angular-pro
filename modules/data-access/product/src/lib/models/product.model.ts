@@ -7,3 +7,8 @@ export type Product = {
   id: string;
   quantity: number;
 };
+
+// Pq type? Na pratica é igual
+// Faz mais sentido interfaces para metodos
+
+// Para tipos é melhor usar type
