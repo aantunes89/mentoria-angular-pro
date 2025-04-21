@@ -2,7 +2,7 @@
   "name": "product-search",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "modules/feature/product/search/src",
-  "prefix": "lib",
+  "prefix": "e-commerce",
   "projectType": "library",
   "tags": [],
   "targets": {

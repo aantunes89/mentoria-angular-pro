@@ -12,15 +12,15 @@ module.exports = [
         'error',
         {
           type: 'attribute',
-          prefix: 'lib',
+          prefix: 'e-commerce',
           style: 'camelCase',
         },
       ],
       '@angular-eslint/component-selector': [
         'error',
         {
-          type: 'element',
-          prefix: 'lib',
+          type: 'e-lement',
+          prefix: 'ecommerce',
           style: 'kebab-case',
         },
       ],
