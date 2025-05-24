@@ -1,5 +1,10 @@
+<!-- O routerLink manda pra uma rota "/" isso normalmente deve ser o home
+  quem vai definir isso é o app-routing.module.ts, o nosso componente não tem que saber pra que rota isso vai -->
+
 <header class="header">
-  <h1 class="logo">{{ title }}</h1>
+  <a routerLink="/" class="header__logo">
+    <h1 class="header__title">{{ title }}</h1>
+  </a>
   <ng-content></ng-content>
   <ng-content select="[right]"></ng-content>
 </header>

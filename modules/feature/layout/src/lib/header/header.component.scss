@@ -1,13 +1,16 @@
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 60px;
   padding: 20px;
   background-color: #6f25f1;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  &__logo {
+    text-decoration: none;
+  }
 
-.logo {
-  color: #fff;
+  &__title {
+    color: #fff;
+  }
 }
