@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MatCardModule } from '@angular/material/card';
 import { RecommendedProductsService } from '@ecommerce/product-data-access';
+import { ProductCardComponent } from '@ecommerce/product-ui';
 
 @Component({
   selector: 'lib-home',
   standalone: true,
-  imports: [CommonModule, MatCardModule],
+  imports: [CommonModule, ProductCardComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
