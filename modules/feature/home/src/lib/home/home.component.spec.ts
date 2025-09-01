@@ -4,7 +4,6 @@ import { MOCK_PRODUCTS, RecommendedProductsService } from '@ecommerce/product-da
 import { of } from 'rxjs';
 
 describe('HomeComponent', () => {
-  let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
   beforeEach(async () => {
@@ -25,12 +24,11 @@ describe('HomeComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(HomeComponent);
-    component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
   it('should render product cards correctly', () => {
-    const cards = fixture.nativeElement.querySelectorAll('mat-card');
+    const cards = fixture.nativeElement.querySelectorAll('lib-product-card');
     expect(cards.length).toBe(MOCK_PRODUCTS.length);
   });
 });
