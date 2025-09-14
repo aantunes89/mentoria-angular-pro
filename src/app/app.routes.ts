@@ -10,4 +10,9 @@ export const APP_ROUTES: Route[] = [
     path: 'home',
     loadChildren: () => import('@ecommerce/home').then((c) => c.HOME_ROUTES),
   },
+  {
+    path: 'product',
+    // eslint-disable-next-line @nx/enforce-module-boundaries
+    loadChildren: () => import('@ecommerce/product-detail').then((c) => c.PRODUCT_DETAIL_ROUTES),
+  },
 ];

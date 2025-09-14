@@ -17,6 +17,7 @@ import {
   switchMap,
 } from 'rxjs';
 import { Product } from 'modules/data-access/product/src/lib/models/product.model';
+import { RouterModule } from '@angular/router';
 
 function isBlank(value: unknown): boolean {
   return (
@@ -29,6 +30,7 @@ function isBlank(value: unknown): boolean {
 
 const PRDUCT_SEARCH_MODULES = [
   CommonModule,
+  RouterModule,
   ReactiveFormsModule,
   MatAutocompleteModule,
   MatFormFieldModule,

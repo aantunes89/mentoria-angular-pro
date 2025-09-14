@@ -4,7 +4,7 @@
 
     <div class="product-card-container">
       @for (product of products$ |async; track product.id) {
-      <lib-product-card [product]="product"></lib-product-card>
+      <lib-product-card [product]="product" (click)="goToProduct(product.id)"></lib-product-card>
       } @empty {
       <!-- @empty =  fallback para listas vazias -->
       <strong>Não temos produtos recomendados para você por enquanto.</strong>

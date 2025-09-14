@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RecommendedProductsService } from '@ecommerce/product-data-access';
 import { ProductCardComponent } from '@ecommerce/product-ui';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'lib-home',
@@ -12,7 +13,12 @@ import { ProductCardComponent } from '@ecommerce/product-ui';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  public products$ = this.recommendedProductsService.getProducts();
+  readonly recommendedProductsService = inject(RecommendedProductsService);
+  readonly router = inject(Router);
 
-  constructor(private recommendedProductsService: RecommendedProductsService) {}
+  readonly products$ = this.recommendedProductsService.getProducts();
+
+  goToProduct(id: string) {
+    this.router.navigateByUrl(`product/${id}`);
+  }
 }
