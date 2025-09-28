@@ -1,7 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
+import { Observable, switchMap } from 'rxjs';
 import { ROUTE_ID, ROUTE_ID_PROVIDERS } from './get-params';
+
+import { Product, ProductSearchService } from '@ecommerce/product-data-access';
 
 @Component({
   selector: 'lib-product-detail',
@@ -12,5 +14,9 @@ import { ROUTE_ID, ROUTE_ID_PROVIDERS } from './get-params';
   providers: [ROUTE_ID_PROVIDERS],
 })
 export class ProductDetailComponent {
-  readonly id$: Observable<string | null> = inject(ROUTE_ID);
+  productSearchService = inject(ProductSearchService);
+
+  readonly product$: Observable<Product> = inject(ROUTE_ID).pipe(
+    switchMap((id) => this.productSearchService.getById(id))
+  );
 }

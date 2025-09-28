@@ -38,4 +38,20 @@ describe('ProductSearchService', () => {
     expect(request.request.method).toBe('GET');
     expect(result).toEqual(MOCK_PRODUCTS);
   });
+
+  it('should return product by id correctly', () => {
+    // ARRANGE
+    const mockId = '123';
+    const url = `${service.API_URL}/products/${mockId}`;
+    let result!: Product;
+
+    // ACT
+    service.getById(mockId).subscribe((product) => (result = product));
+
+    // ASSERT
+    const request = httpMock.expectOne(url);
+    request.flush(MOCK_PRODUCTS[0]);
+    expect(request.request.method).toBe('GET');
+    expect(result).toEqual(MOCK_PRODUCTS[0]);
+  });
 });
