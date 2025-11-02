@@ -2,7 +2,7 @@
   "name": "product-ui",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "modules/ui/product/src",
-  "prefix": "lib",
+  "prefix": "e-commerce",
   "projectType": "library",
   "tags": ["type:ui"],
   "targets": {
