@@ -28,7 +28,7 @@ describe('HomeComponent', () => {
   });
 
   it('should render product cards correctly', () => {
-    const cards = fixture.nativeElement.querySelectorAll('lib-product-card');
+    const cards = fixture.nativeElement.querySelectorAll('e-commerce-product-card');
     expect(cards.length).toBe(MOCK_PRODUCTS.length);
   });
 });

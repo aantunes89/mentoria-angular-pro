@@ -1,7 +1,9 @@
 <e-commerce-layout-header title="Ecommerce">
   <e-commerce-product-search></e-commerce-product-search>
-
-  <p right>Login</p>
+  <div right class="right-content">
+    <p>Login</p>
+    <e-commerce-cart [quantity]="quantity()"></e-commerce-cart>
+  </div>
 </e-commerce-layout-header>
 
 <router-outlet></router-outlet>
