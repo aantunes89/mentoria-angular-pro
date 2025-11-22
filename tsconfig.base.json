@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "useDefineForClassFields": false,
     "baseUrl": ".",
+    "typeRoots": ["node_modules/@types"],
     "paths": {
       "@ecommerce/auth-form": ["modules/feature/auth/form/src/index.ts"],
       "@ecommerce/home": ["modules/feature/home/src/index.ts"],
